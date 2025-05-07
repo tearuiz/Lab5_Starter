@@ -4,12 +4,13 @@ window.addEventListener('DOMContentLoaded', init);
 
 function init() {
   // DOM elements
-  const hornSelect = document.getElementById('horn-select');
-  const volumeSlider = document.getElementById('volume-slider');
-  const volumeIcon = document.getElementById('volume-image');
-  const soundImage = document.getElementById('sound-image');
-  const audioElement = document.getElementById('horn-sound');
-  const playButton = document.getElementById('play-button');
+  const hornSelect = document.getElementById("horn-select");
+  const volumeSlider = document.getElementById("volume");           // from <input id="volume">
+  const volumeIcon = document.querySelector("#volume-controls img"); // the image inside the div
+  const soundImage = document.querySelector("#expose img");         // first img in the section
+  const audioElement = document.querySelector("audio");             // the only <audio> element
+  const playButton = document.querySelector("button");              // the only <button>
+
   
   // initialize JSConfetti
   const jsConfetti = new JSConfetti();
@@ -66,5 +67,5 @@ function init() {
           jsConfetti.addConfetti();
       }
   });
-
+ 
 }
